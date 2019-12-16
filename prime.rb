@@ -5,17 +5,15 @@ num = gets.chomp.to_i
 
 ct=0
 
-if(num==0)
+if(num<2)
 	puts "#{num} is not prime"
-
-elsif(num==2)
-	puts "#{num} is prime"
 
 else
 	i=2
 	while(i<=num/2)
-		if(num%2==0) 
+		if(num%i==0) 
 			ct+=1
+			break
 		end
 		i+=1
 	end
